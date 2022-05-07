@@ -1,0 +1,19 @@
+{
+  "name": "weathercli",
+  "version": "1.0.0",
+  "description": "Weather forecast app",
+  "main": "index.js",
+  "bin": "weather.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon weather.js",
+    "start": "node weather.js"
+  },
+  "author": "Mihail OLARU",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
+  }
+}
