@@ -15,5 +15,9 @@
   "devDependencies": {
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dedent-js": "^1.0.1"
   }
 }

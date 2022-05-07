@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 import { getArgs } from "./helpers/args.js";
-
+import { printHelp } from "./services/log.service.js";
 const initCLI = () => {
 	//Getting the cms args. You can optionally use tools like Yargs for this purpose.
 	const args = getArgs(process.argv);	
 	console.log(args);
 	if (args.h){
 		//if arg is 'h' output the help info.
+		printHelp();
 	}
 	if (args.s){
 		//If arg is 's', save the city.
