@@ -1,3 +1,4 @@
+// chalk is used to color the output.
 import chalk from "chalk";
 import dedent from "dedent-js";
 
