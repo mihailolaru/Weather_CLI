@@ -1,6 +1,7 @@
 // chalk is used to color the output.
 import chalk from "chalk";
 import dedent from "dedent-js";
+import { getIcon } from "./api.service.js";
 
 const printError = error => {
   console.log(chalk.bgRed(" error "), error);
@@ -22,10 +23,10 @@ const printHelp = () => {
   );
 };
 
-const printWeather = res => {
+const printWeather = ( res, icon ) => {
 	  console.log(
 		dedent`${chalk.bgYellow("WEATHER")} Weather in ${res?.name} 
-		${res?.weather[0]?.icon} ${res?.weather[0]?.description}
+		${getIcon(res?.weather?.[0]?.icon)} ${res?.weather?.[0]?.description}
 		Temperature: ${res?.main?.temp}°C (feels like ${res?.main?.feels_like}°C)
 		Humidity: ${res?.main?.humidity}%
 		Wind speed: ${res?.wind?.speed} m/s

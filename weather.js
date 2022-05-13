@@ -23,10 +23,10 @@ const saveDataToFile = async (key, data) => {
 
 const getForecast = async () => {  
   try{ 
-      const weather = await getWeather();
-      //console.log(weather);
+      const weather = await getWeather();     
       printWeather(weather);    
     } catch (e) {   
+      console.log("e?.response?.status", e?.response?.status);
       if( e?.response?.status === 404 ){
           printError("Incorrect city name.");
       } else if (e?.response?.status === 401) {
